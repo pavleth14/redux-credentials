@@ -15,9 +15,13 @@ const credentialsSlice = createSlice({
     setLastName: (state, action) => {
       state.lastName = action.payload;
     },
+    resetCredentials: (state) => {
+      state.firstName = '';
+      state.lastName = '';
+    },
   },
 });
 
-export const { setFirstName, setLastName } = credentialsSlice.actions;
+export const { setFirstName, setLastName, resetCredentials } = credentialsSlice.actions;
 
 export default credentialsSlice.reducer;
